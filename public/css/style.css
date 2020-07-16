@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(235, 235, 235);
+}
+
+h1, h2, h3{
+    color: rgb(39, 36, 36);
+    letter-spacing: 1.2px;
+}
+
+h1{
+    font-family: 'Fondamento';
+    font-size: 30px;
+    padding: 30px 0;
+    font-weight: 100;
+}
+
+h2{
+    font-family: 'Montserrat';
+    font-size: 25px;
+    padding: 20px 0;
+    font-weight: 100;
+}
+
+h3, a{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    color: rgb(39, 36, 36);
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+a{
+    color: rgb(219, 143, 0);
+}
+
+p, .btn{
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: rgb(117, 117, 117);
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+a:hover{
+    color: rgb(255, 192, 75);
+}
+
+:visited{
+    color: rgb(80, 80, 80);
+}
+
+.myCenter{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.btn{
+    color: #d8d8d8;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-success{
+    background-color: rgb(0, 196, 0);
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.btn-info{
+    background-color: rgb(113, 71, 212);
+    border: 1px solid rgb(153, 153, 153);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+}
+
+.myHr {
+    width: 100%;
+    /* height: 5px; */
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+    .navLogo{
+        margin-left: 10%;
+        width: 60px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .navLogo img{
+        height: auto;
+    }
+    .navLogo h1{
+        padding: 0;
+    }
+    .navRightCorner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10%;
+    }
+        .burgerContainer{
+            margin-left: 30px;
+            width: 50px;
+            height: 60px;
+            cursor: pointer;
+        }
+            .burger1, .burger2{
+                width: 35px;
+                height: 3px;
+                background-color: rgb(90, 90, 90);
+                border-radius: 5px;
+            }
+            .burger1{
+                margin-top: 25px;
+            }
+            .burger2{
+                margin-top: 9px;
+            }
+        .burgerContent{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            transition: 1s all ease;
+            z-index: -1;
+            background-color: rgb(240, 240, 240);
+            width: 100%;
+            height: 100vh;
+        }
+        .burgerContent ul li{
+            list-style: none;
+            margin: 50px;
+        }
+        .burgerContent ul li a{
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px;
+            letter-spacing: 3px;
+        }
+        .burgerContent ul li a:hover{
+            color: rgb(255, 196, 0);
+        }
+        .burgerMenu{
+            display: none;
+        }
+.banner{
+    margin: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+    /* .bannerDesc{
+    } */
+    .bannerImg{
+        background-color: grey;
+        width:100%; 
+    }
+
+.galleryBodyContainer{
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.galleryBody{
+    overflow: hidden;
+    position: relative;
+}
+
+.bestProduct{
+    margin: 80px 10% 0px 10%;
+}
+    .bestProductHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 -80px 0;
+    }
+    .bestProductBodyContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 0 0px;
+        justify-items: center;
+        align-items: center;
+    }
+    .bestPrductBody{
+        margin-top: 100px;
+        overflow: hidden;
+        position: relative;
+    }
+        .bestProductImg{
+            overflow: hidden;
+            width: 290px;
+            height: 290px;
+        }
+        .cartBtn{
+            margin-bottom: 2px;
+        }
+        .bestPrductCaption{
+            padding-left: 10px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: rgba(8, 8, 8, 0.6);
+            transition: 2s all ease;
+        }
+        .bestPrductCaption h1,
+        .bestPrductCaption p,
+        .bestPrductCaption>a{
+            color: #f2f2f2;
+        }
+        .bestPrductBody:hover > .bestPrductCaption,
+        .galleryBody:hover > .bestPrductCaption{
+            left: 0%;
+        }
+        .bestPrductCaption>a{
+            margin: 5px;
+        }
+        .bestPrductCaption>a:hover{
+            color: rgb(255, 192, 75);
+            text-decoration: underline;
+        }
+
+.about{
+    background-color: #333;
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px 10% 0 10%;
+}
+    .aboutDesHeader h2,
+    .aboutDesBody p{
+        color: #f2f2f2;
+    }
+    .aboutDesFooter{
+        padding: 50px 0;
+    }
+
+.footer{
+    background-color: #333;
+    width: 100%;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 0 50px;
+}
+    .openingHours h3, 
+    .address h3,
+    .contact h3,
+    .followUs h3,
+    .openingHours p,
+    .address p,
+    .contact p{
+        color: #f2f2f2;
+    }
+    .openingHours h3, 
+    .address h3,
+    .contact h3,
+    .followUs h3{
+        padding-top: 40px;
+    }
+    .followUs{
+        padding-bottom: 50px;
+    }
+    .followUs ul li{
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+/* less than 390 */
+@media only screen and (max-width: 390px) {
+    /* .bestProductBodyContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+        grid-gap: 0 50px;
+    }
+    .bestProductImg{
+        overflow: hidden;
+        min-width: 100px;
+        height: 150px;
+        border: 1px solid red;
+    } */
+}
+
+/* less than 1000 */
+@media only screen and (max-width: 1000px) {
+    .bannerDesc{
+        display: none;
+    }
+    /* .banner{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 0 50px;
+    }
+    .bestProductBodyContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+        grid-gap: 0 50px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 2fr));
+        grid-gap: 0 50px;
+    } */
+}
+
+/* more than 900 */
+@media only screen and (min-width: 800px) {
+    .burgerContainer{
+        display: none;
+    }
+    .burgerMenu{
+        display: flex;
+    }
+    .burgerMenu ul{
+        display: flex;
+    }
+    .burgerMenu ul li{
+        list-style: none;
+        padding: 5px 10px;
+    }
+    .burgerMenu ul li a{
+        padding: 5px 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .burgerMenu ul li a:hover{
+        color: rgb(255, 196, 0);
+        background-color: rgb(31, 2, 70);
+        border-radius: 5px;
+    }
+    /* .bannerDesc{
+        display: grid;
+        align-items: center;
+        width: 50%;
+    }
+    .bannerDesc h1{
+        font-size: 45px;
+    }
+    .bestProductBodyContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+        grid-gap: 0 50px;
+    } */
+}
+
+/* more than 1000 */
+@media only screen and (min-width: 1000px) {
+    .bannerDesc{
+        display: grid;
+        align-items: center;
+        width: 50%;
+    }
+    .bannerDesc h1{
+        font-size: 60px;
+    }
+}
